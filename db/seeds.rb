@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# t.string :name
+# t.string :address1
+# t.string :address2
+# t.string :city
+# t.string :state
+# t.integer :zip
+# t.decimal :latitude
+# t.decimal :longitude
+# t.string :url
+# t.string :phone
+# t.time :open_mon
+# t.time :open_tue
+# t.time :open_wed
+# t.time :open_thu
+# t.time :open_fri
+# t.time :open_sat
+# t.time :open_sun
+# t.time :close_mon
+# t.time :close_tue
+# t.time :close_wed
+# t.time :close_thu
+# t.time :close_fri
+# t.time :close_sat
+# t.time :close_sun
+# t.string :manager
+
+Market.create(name:'Adams/Vermont Farmer\'s Market', address1: "1432 W. Adams Blvd", address2: nil, city: 'Los Angeles', state: 'CA', zip: 90007, latitude: 34.032760, longitude: -118.287570, url: null, phone: '310-621-0336', open_wed: "2019-05-27 14:00:00", close_wed: "2019-05-27 18:00:00")
+
