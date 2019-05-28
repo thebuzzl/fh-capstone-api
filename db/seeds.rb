@@ -35,3 +35,8 @@ User.create(firstname: 'Russell', lastname: 'Schmidt', email: 'r@rusl.io', phone
 
 Market.create(name:'Adams/Vermont Farmer\'s Market', address1: "1432 W. Adams Blvd", address2: nil, city: 'Los Angeles', state: 'CA', zip: 90007, latitude: 34.032760, longitude: -118.287570, url: 'https://www.facebook.com/adamsvermontfm/', phone: '310-621-0336', open_wed: "2019-05-27 14:00:00", close_wed: "2019-05-27 18:00:00")
 
+Vendor.create(name: 'Test Apples', market_id: Market.where(name: 'Adams/Vermont Farmer\'s Market')[0].id)
+
+Product.create(name: 'apple', category: 'fruit', vendor_id: Vendor.where(name: 'Test Apples')[0].id, market_id: Market.where(name: 'Adams/Vermont Farmer\'s Market' )[0].id )
+
+Ware.create(price: '1.99', quantity: '100', discount: '0.2', market_id: Market.where(name: 'Adams/Vermont Farmer\'s Market' )[0].id, product: Product.where(name: 'apple')[0].id)
