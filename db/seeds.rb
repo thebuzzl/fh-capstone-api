@@ -31,5 +31,7 @@
 # t.time :close_sun
 # t.string :manager
 
-Market.create(name:'Adams/Vermont Farmer\'s Market', address1: "1432 W. Adams Blvd", address2: nil, city: 'Los Angeles', state: 'CA', zip: 90007, latitude: 34.032760, longitude: -118.287570, url: null, phone: '310-621-0336', open_wed: "2019-05-27 14:00:00", close_wed: "2019-05-27 18:00:00")
+User.create(firstname: 'Russell', lastname: 'Schmidt', email: 'r@rusl.io', phone: '213-709-6969')
+
+Market.create(name:'Adams/Vermont Farmer\'s Market', address1: "1432 W. Adams Blvd", address2: nil, city: 'Los Angeles', state: 'CA', zip: 90007, latitude: 34.032760, longitude: -118.287570, url: 'https://www.facebook.com/adamsvermontfm/', phone: '310-621-0336', open_wed: "2019-05-27 14:00:00", close_wed: "2019-05-27 18:00:00")
 
