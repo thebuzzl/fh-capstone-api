@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_030429) do
+ActiveRecord::Schema.define(version: 2019_05_29_030834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 2019_05_29_030429) do
     t.string "manager"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "products_id"
+    t.index ["products_id"], name: "index_vendors_on_products_id"
   end
 
   create_table "wares", force: :cascade do |t|
@@ -95,6 +97,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_030429) do
   add_foreign_key "markets", "wares", column: "wares_id"
   add_foreign_key "products", "vendors"
   add_foreign_key "products", "wares", column: "wares_id"
+  add_foreign_key "vendors", "products", column: "products_id"
   add_foreign_key "wares", "markets"
   add_foreign_key "wares", "products"
 end
